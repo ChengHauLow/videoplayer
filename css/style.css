@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+:root{
+    --bodyBC: #666;
+    --generalTC: #fff;
+    --videoBC: #000;
+    --controlBC: #333;
+    --playBtnC: #28a745;
+    --stopBtnC: #dc3545;
+    --replayBtnC: skyblue;
+    --pauseBtnC: #fff;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Questrial', sans-serif;
+    background-color: var(--bodyBC);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    margin: 0;
+}
+
+h1{
+    color: var(--generalTC);
+}
+.container{
+    margin: 0;
+    padding: 0;
+}
+.screen{
+    cursor: pointer;
+    width: 60%;
+    background-color: var(--videoBC) !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.controls{
+    background-color: var(--controlBC);
+    color: var(--generalTC);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.controls .btn{
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.controls #volumeSize{
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.controls #volumevalue{
+    font-weight: bolder;
+}
+
+.controls .fa-plus-square:hover,
+.controls .fa-minus-square:hover{
+    color: #fff;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.controls .fa-play{
+    color: var(--playBtnC);
+}
+.controls .fa-stop{
+    color: var(--stopBtnC);
+}
+.controls .fa-pause,
+.controls .fa-fast-forward,
+.controls .fa-fast-backward,
+.controls .fa-undo,
+.controls .unloop,
+.controls .fa-expand
+{
+    color: var(--pauseBtnC);
+}
+
+.controls .loop{
+    color: var(--playBtnC);
+}
+
+.controls .fa-undo
+{
+    color: var(--replayBtnC);
+}
+
+.controls .fa-sync{
+    margin-left: 5px;
+}
+
+.controls .timestamp{
+    color: var(--generalTC);
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+@media(max-width: 800px){
+    .screen, .controls{
+        width: 90%;
+    }
+}
